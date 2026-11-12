@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "c3pocr"
+version = "0.1.0"
+description = "OCR com extração de campos estruturados em JSON"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Stephany Silva" }]
+dependencies = ["Pillow>=10.0", "pytesseract>=0.3.10"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["c3pocr*"]
