@@ -9,3 +9,8 @@ def test_parse_common_document_lines():
 
 def test_ignore_unknown_lines():
     assert parse_lines("Cliente .................... Ana") == {}
+
+
+def test_parse_thousands_in_money():
+    result = parse_lines("Valor Total .................... R$ 1.234,56")
+    assert result["valor_total"]["value"] == 1234.56
